@@ -1,0 +1,16 @@
+[
+  {"id": "demo-ok-1", "date": "2024-11-03T15:20:00", "location": "Bristol", "species": "Fox/badger tick", "latinName": "Ixodes canisuga"},
+  {"id": "demo-ok-1", "date": "2024-11-03T15:20:00", "location": "Bristol", "species": "Fox/badger tick", "latinName": "Ixodes canisuga"},
+  {"id": "demo-copy-of-real-record", "date": "2014-09-12T23:33:03", "location": "LONDON", "species": "southern rodent tick"},
+  {"id": "demo-fix-1", "date": "14/08/2024 09:30", "location": "  newcastle upon tyne ", "species": "marsh TICK"},
+  {"id": "demo-fix-2", "date": "2024-08-15", "location": "cardiff", "latinName": "ixodes canisuga"},
+  {"id": "demo-fix-3", "date": "2024-08-16T09:00:00Z", "location": "Exeter", "latinName": "Ixodes ricinus"},
+  {"id": "demo-bad-1", "date": "2024-02-31T10:00:00", "location": "Leeds", "species": "Marsh tick"},
+  {"id": "demo-bad-2", "date": "2099-01-01T00:00:00", "location": "Leeds", "species": "Marsh tick"},
+  {"id": "demo-bad-3", "location": "Leeds", "species": "Marsh tick"},
+  {"id": "demo-bad-4", "date": "2024-05-05T10:00:00", "location": "", "species": "Marsh tick"},
+  {"id": "demo-bad-5", "date": "2024-05-06T10:00:00", "location": "Leeds"},
+  {"id": "demo-bad-6", "date": "2024-05-07T10:00:00", "location": "Leeds", "species": "Marsh tick", "latinName": "Ixodes canisuga"},
+  {"date": "2024-05-08T10:00:00", "location": "Leeds", "species": "Marsh tick"},
+  "this is not a sighting"
+]

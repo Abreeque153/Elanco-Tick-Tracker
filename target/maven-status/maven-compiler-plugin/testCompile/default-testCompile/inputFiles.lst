@@ -1,0 +1,16 @@
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/analytics/InsightsServiceTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/analytics/StatsTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/analytics/TrendServiceTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/api/ApiIntegrationTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/domain/CatalogueTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/domain/ReportServiceTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/ingest/CircuitBreakerTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/ingest/ElancoApiClientTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/ingest/RetryPolicyTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/ingest/SightingCleanerTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/ingest/SyncServiceTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/query/QueryParserTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/store/SightingRepositoryTest.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/support/FakeUpstream.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/support/MutableClock.java
+/Users/ABREEQUE/Documents/elanco-tick-tracker/src/test/java/com/ticktracker/support/TestSupport.java

@@ -1,0 +1,125 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/Users/ABREEQUE/.m2/wrapper/dists/apache-maven-3.9.11/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.ticktracker:tick-tracker >--------------------
+[INFO] Building UK Tick Sightings Tracker - Backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ tick-tracker ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ tick-tracker ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ tick-tracker ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ tick-tracker ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ tick-tracker ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ticktracker.ingest.SightingCleanerTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s -- in com.ticktracker.ingest.SightingCleanerTest
+[INFO] Running com.ticktracker.ingest.CircuitBreakerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.ticktracker.ingest.CircuitBreakerTest
+[INFO] Running com.ticktracker.ingest.SyncServiceTest
+02:15:22.933 [main] INFO com.ticktracker.ingest.SyncService -- TEST sync SUCCESS: received=29 inserted=19 updated=0 unchanged=0 rejected=10 in 0 ms
+02:15:22.949 [main] WARN com.ticktracker.ingest.SyncService -- TEST sync PARTIAL after 14 records: Invalid JSON after 14 records: Unexpected end-of-input within/between Array entries
+02:15:22.950 [main] INFO com.ticktracker.ingest.SyncService -- TEST sync PARTIAL: received=14 inserted=14 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.955 [main] INFO com.ticktracker.ingest.SyncService -- IMPORT sync SUCCESS: received=29 inserted=19 updated=0 unchanged=0 rejected=10 in 0 ms
+02:15:22.959 [main] WARN com.ticktracker.ingest.SyncService -- IMPORT sync FAILED after 0 records: Expected a JSON array but the response started with START_OBJECT
+02:15:22.959 [main] INFO com.ticktracker.ingest.SyncService -- IMPORT sync FAILED: received=0 inserted=0 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.965 [main] INFO com.ticktracker.ingest.SyncService -- FIRST sync SUCCESS: received=15 inserted=15 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.966 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 500 {"error":"Internal server error"}). Retry 1/1 in 1000 ms
+02:15:22.967 [main] WARN com.ticktracker.ingest.SyncService -- SECOND sync FAILED after 0 records: Gave up after 2 attempts: HTTP 500 {"error":"Internal server error"}
+02:15:22.967 [main] INFO com.ticktracker.ingest.SyncService -- SECOND sync FAILED: received=0 inserted=0 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.978 [main] INFO com.ticktracker.ingest.SyncService -- FIRST sync SUCCESS: received=15 inserted=15 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.981 [main] INFO com.ticktracker.ingest.SyncService -- SECOND sync SUCCESS: received=2 inserted=0 updated=1 unchanged=0 rejected=1 in 0 ms
+02:15:22.986 [main] INFO com.ticktracker.ingest.SyncService -- TEST sync SUCCESS: received=0 inserted=0 updated=0 unchanged=0 rejected=0 in 0 ms
+02:15:22.989 [main] WARN com.ticktracker.ingest.SyncService -- Marked 1 sync run(s) interrupted by the last shutdown as FAILED
+02:15:22.997 [main] INFO com.ticktracker.ingest.SyncService -- FIRST sync SUCCESS: received=29 inserted=19 updated=0 unchanged=0 rejected=10 in 0 ms
+02:15:23.002 [main] INFO com.ticktracker.ingest.SyncService -- SECOND sync SUCCESS: received=29 inserted=0 updated=0 unchanged=19 rejected=10 in 0 ms
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.408 s -- in com.ticktracker.ingest.SyncServiceTest
+[INFO] Running com.ticktracker.ingest.ElancoApiClientTest
+02:15:23.021 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (Could not connect to 127.0.0.1: java.net.ConnectException). Retry 1/3 in 1000 ms
+02:15:23.021 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (Could not connect to 127.0.0.1: java.net.ConnectException). Retry 2/3 in 2000 ms
+02:15:23.021 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (Could not connect to 127.0.0.1: java.net.ConnectException). Retry 3/3 in 4000 ms
+02:15:23.024 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 429 {"error":"Rate limit exceeded, please try again later"}). Retry 1/3 in 7000 ms
+02:15:23.026 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 500 {"error":"Internal server error"}). Retry 1/3 in 1000 ms
+02:15:23.027 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 500 {"error":"Internal server error"}). Retry 2/3 in 2000 ms
+02:15:23.027 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 500 {"error":"Internal server error"}). Retry 3/3 in 4000 ms
+02:15:23.232 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (No response within 0s). Retry 1/1 in 0 ms
+02:15:23.453 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 500 {"error":"Internal server error"}). Retry 1/3 in 1000 ms
+02:15:23.454 [main] WARN com.ticktracker.ingest.ElancoApiClient -- Upstream call failed (HTTP 503). Retry 2/3 in 2000 ms
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.452 s -- in com.ticktracker.ingest.ElancoApiClientTest
+[INFO] Running com.ticktracker.ingest.RetryPolicyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.ticktracker.ingest.RetryPolicyTest
+[INFO] Running com.ticktracker.api.ApiIntegrationTest
+02:15:23.501 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ticktracker.api.ApiIntegrationTest]: ApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:15:23.558 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ticktracker.TickTrackerApplication for test class com.ticktracker.api.ApiIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2026-11-02T02:15:23.692+05:00  INFO 42098 --- [tick-tracker] [           main] com.ticktracker.api.ApiIntegrationTest   : Starting ApiIntegrationTest using Java 25.0.2 with PID 42098 (started by ABREEQUE in /Users/ABREEQUE/Documents/elanco-tick-tracker)
+2026-11-02T02:15:23.693+05:00  INFO 42098 --- [tick-tracker] [           main] com.ticktracker.api.ApiIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2026-11-02T02:15:24.086+05:00  INFO 42098 --- [tick-tracker] [           main] com.zaxxer.hikari.HikariDataSource       : sqlite - Starting...
+2026-11-02T02:15:24.090+05:00  INFO 42098 --- [tick-tracker] [           main] com.zaxxer.hikari.pool.HikariPool        : sqlite - Added connection org.sqlite.jdbc4.JDBC4Connection@2df71be0
+2026-11-02T02:15:24.090+05:00  INFO 42098 --- [tick-tracker] [           main] com.zaxxer.hikari.HikariDataSource       : sqlite - Start completed.
+2026-11-02T02:15:24.357+05:00  INFO 42098 --- [tick-tracker] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-02T02:15:24.357+05:00  INFO 42098 --- [tick-tracker] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-02T02:15:24.360+05:00  INFO 42098 --- [tick-tracker] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-02T02:15:24.364+05:00  INFO 42098 --- [tick-tracker] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2026-11-02T02:15:24.393+05:00  INFO 42098 --- [tick-tracker] [           main] com.ticktracker.api.ApiIntegrationTest   : Started ApiIntegrationTest in 0.791 seconds (process running for 2.241)
+2026-11-02T02:15:24.710+05:00  INFO 42098 --- [tick-tracker] [           main] com.ticktracker.ingest.SyncService       : TEST sync SUCCESS: received=29 inserted=19 updated=0 unchanged=0 rejected=10 in 3 ms
+2026-11-02T02:15:24.765+05:00  INFO 42098 --- [tick-tracker] [           main] com.ticktracker.ingest.SyncService       : IMPORT sync SUCCESS: received=2 inserted=1 updated=0 unchanged=0 rejected=1 in 0 ms
+2026-11-02T02:15:24.996+05:00  INFO 42098 --- [tick-tracker] [           main] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 154 ms
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.575 s -- in com.ticktracker.api.ApiIntegrationTest
+[INFO] Running com.ticktracker.query.QueryParserTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.ticktracker.query.QueryParserTest
+[INFO] Running com.ticktracker.domain.CatalogueTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.ticktracker.domain.CatalogueTest
+[INFO] Running com.ticktracker.domain.ReportServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.ticktracker.domain.ReportServiceTest
+[INFO] Running com.ticktracker.analytics.InsightsServiceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in com.ticktracker.analytics.InsightsServiceTest
+[INFO] Running com.ticktracker.analytics.StatsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.ticktracker.analytics.StatsTest
+[INFO] Running com.ticktracker.analytics.TrendServiceTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.ticktracker.analytics.TrendServiceTest
+[INFO] Running com.ticktracker.store.SightingRepositoryTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.ticktracker.store.SightingRepositoryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 92, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ tick-tracker ---
+[INFO] Building jar: /Users/ABREEQUE/Documents/elanco-tick-tracker/target/tick-tracker.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.6:repackage (repackage) @ tick-tracker ---
+[INFO] Replacing main artifact /Users/ABREEQUE/Documents/elanco-tick-tracker/target/tick-tracker.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/ABREEQUE/Documents/elanco-tick-tracker/target/tick-tracker.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.198 s
+[INFO] Finished at: 2026-11-02T02:15:25+05:00
+[INFO] ------------------------------------------------------------------------

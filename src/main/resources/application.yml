@@ -1,0 +1,60 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: tick-tracker
+  sql:
+    init:
+      # The schema is applied by com.ticktracker.store.Database, not Spring.
+      mode: never
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      indent-output: true
+
+# --- Application settings (bound to com.ticktracker.config.TicksProperties) ---
+ticks:
+  storage:
+    # SQLite file; created automatically. Override with TICKS_STORAGE_PATH.
+    path: data/ticks.db
+  upstream:
+    base-url: https://dev-task.elancoapps.com/data
+    connect-timeout: 5s
+    # Upstream latency reached ~5s under load when tested, so allow headroom.
+    request-timeout: 30s
+    retry:
+      max-attempts: 4
+      initial-delay: 1s
+      # The API's 429 docs say "wait a minute", so backoff may grow to 60s.
+      max-delay: 60s
+      jitter: 0.5
+    circuit-breaker:
+      failure-threshold: 3
+      open-duration: 2m
+  sync:
+    on-startup: true
+    interval: 30m
+    stale-after: 2h
+    chunk-size: 500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+    try-it-out-enabled: true
+  default-produces-media-type: application/json
+
+logging:
+  level:
+    com.ticktracker: INFO
